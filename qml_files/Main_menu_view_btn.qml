@@ -10,6 +10,7 @@ Rectangle {
         id: btn_m_area
         anchors.fill: parent
     }
+
     Text {
         id: btn_text
         verticalAlignment: Text.AlignVCenter

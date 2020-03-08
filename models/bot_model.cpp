@@ -36,28 +36,9 @@ void Bot_model::set_is_rotate(bool v)
 
 void Bot_model::receive_cards(const QVector<Card>& new_cards)
 {
-    // this code probably never execute
-    if(!cards.isEmpty()) {
-        beginRemoveRows(QModelIndex(), 0, cards.size() - 1);
-        cards.clear();
-        endRemoveRows();
-    }
-    // end this code probably never execute
-
     beginInsertRows(QModelIndex(), 0, new_cards.size() - 1);
     cards = new_cards;
     endInsertRows();
-
-
-    /* Debug info
-    qDebug() << this << "Bot after receiving cards";
-    for(int i = 0; i < cards.size(); ++i) {
-        qDebug() << cards[i].get_img_path()
-                 << (int)cards[i].get_suit()
-                 << (int)cards[i].get_value()
-                 << (int)cards[i].get_owner();
-    }
-    */
 }
 
 Card Bot_model::pop_last_card()

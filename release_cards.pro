@@ -20,7 +20,8 @@ SOURCES += \
         models/bot_model.cpp \
         models/referee_model.cpp \
         card.cpp \
-        main.cpp
+        main.cpp \
+    rules_loader.cpp
 
 RESOURCES += qml.qrc
 
@@ -85,4 +86,5 @@ HEADERS += \
     models/bot_model.h \
     models/referee_model.h \
     card.h \
-    Constants.h
+    Constants.h \
+    rules_loader.h

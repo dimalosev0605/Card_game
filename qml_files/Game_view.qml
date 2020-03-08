@@ -9,6 +9,8 @@ Rectangle {
     color: main_menu_view_font_rect.canvas_color
     z: 0
 
+    property int count_of_cards_for_player: 9
+
     Referee_model {
         id: referee_model
         onChange_curr_item_img: {
@@ -192,8 +194,9 @@ Rectangle {
         z: 1
         anchors.horizontalCenter: parent.horizontalCenter
         height: bots_cards_size
-        width: parent.width < (bots_cards_size * 9 + top_bot_list_view.spacing * 8) ?
-                   bots_cards_size : (bots_cards_size * 9 + top_bot_list_view.spacing * 8)
+        width: parent.width < (bots_cards_size * count_of_cards_for_player + top_bot_list_view.spacing * (count_of_cards_for_player - 1)) ?
+               bots_cards_size :
+               (bots_cards_size * count_of_cards_for_player + top_bot_list_view.spacing * (count_of_cards_for_player - 1))
         model: top_bot_model
         orientation: Qt.Horizontal
         spacing: 2
@@ -227,7 +230,7 @@ Rectangle {
         text: "Андрей: " + score
     }
 
-    property int left_and_right_bots_view_height: bots_cards_size * 9 + left_bot_list_view.spacing * 8
+    property int left_and_right_bots_view_height: bots_cards_size * count_of_cards_for_player + left_bot_list_view.spacing * (count_of_cards_for_player - 1)
     ListView {
         id: left_bot_list_view
         z: 1

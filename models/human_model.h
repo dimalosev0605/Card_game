@@ -1,7 +1,6 @@
 #ifndef HUMAN_MODEL_H
 #define HUMAN_MODEL_H
 
-#include <QDebug>
 #include "base_model.h"
 #include "card.h"
 

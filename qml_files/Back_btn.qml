@@ -20,6 +20,7 @@ Rectangle {
         elide: Text.ElideRight
         wrapMode: Text.WordWrap
     }
+
     MouseArea {
         anchors.fill: parent
         onClicked: stack_view.pop()

@@ -44,25 +44,9 @@ void Referee_model::distribute_cards()
 QVector<Card> Referee_model::give_cards_for_player(int user)
 {
     if(user < 0 || user >= Constants::count_of_players) {
-        qDebug() << "Invalid user";
         std::abort();
     }
-
-    /* Debug info
-    for(int i = 0; i < distributed_cards[user].size(); ++i) {
-        qDebug() << distributed_cards[user].at(i).get_img_path()
-                 << (int)distributed_cards[user].at(i).get_suit()
-                 << (int)distributed_cards[user].at(i).get_value()
-                 << (int)distributed_cards[user].at(i).get_owner();
-    }
-    */
-
     return distributed_cards[user];
-}
-
-void Referee_model::set_is_opened_cards(bool new_value)
-{
-    is_opened_cards = new_value;
 }
 
 void Referee_model::receive_card(const Card &card)

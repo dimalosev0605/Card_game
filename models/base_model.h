@@ -8,7 +8,6 @@ class Base_model: public QAbstractListModel
 {
     Q_OBJECT
 
-
     QHash<int, QByteArray> m_roles;
     QHash<int, QByteArray> roleNames() const override;
 

@@ -22,6 +22,13 @@ Rectangle {
             }
         }
 
+        Component {
+            id: rules_view_comp
+            Rules_view {
+                id: rules_view
+            }
+        }
+
         Column {
             id: column_with_btns
             anchors.centerIn: parent
@@ -36,7 +43,7 @@ Rectangle {
                 height: parent.btns_height
                 color: main_rect.color
                 btn_text.text: "Правила"
-//                btn_m_area.onClicked: stack_view.push()
+                btn_m_area.onClicked: stack_view.push(rules_view_comp)
             }
             Main_menu_view_btn {
                 id: play_btn

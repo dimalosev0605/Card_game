@@ -25,27 +25,9 @@ QVariant Human_model::data(const QModelIndex &index, int role) const
 
 void Human_model::receive_cards(const QVector<Card>& new_cards)
 {
-    // this code probably never execute
-    if(!cards.isEmpty()) {
-        beginRemoveRows(QModelIndex(), 0, cards.size() - 1);
-        cards.clear();
-        endRemoveRows();
-    }
-    // end this code probably never execute
-
     beginInsertRows(QModelIndex(), 0, new_cards.size() - 1);
     cards = new_cards;
     endInsertRows();
-
-    /* Debug info
-    qDebug() << "Human after receiving cards:";
-    for(int i = 0; i < cards.size(); ++i) {
-        qDebug() << cards[i].get_img_path()
-                 << (int)cards[i].get_suit()
-                 << (int)cards[i].get_value()
-                 << (int)cards[i].get_owner();
-    }
-    */
 }
 
 void Human_model::remove_card(int index)

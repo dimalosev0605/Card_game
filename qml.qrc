@@ -3,10 +3,11 @@
         <file>qml_files/main.qml</file>
         <file>qml_files/Main_menu_view.qml</file>
         <file>qml_files/Main_menu_view_btn.qml</file>
-		<file>qml_files/Game_view.qml</file>
+        <file>qml_files/Game_view.qml</file>
         <file>qml_files/Back_btn.qml</file>
         <file>qml_files/Card_delegate.qml</file>
         <file>qml_files/Opened_cards_view.qml</file>
+		<file>qml_files/Rules_view.qml</file>
         <file>cards/backs/one_back.svg</file>
         <file>cards/backs/four_backs.png</file>
         <file>cards/backs/rotated_back.png</file>
@@ -48,5 +49,6 @@
         <file>cards/spades/jack.svg</file>
         <file>cards/spades/king.svg</file>
         <file>cards/spades/queen.svg</file>
+		<file>rules.txt</file>
     </qresource>
 </RCC>

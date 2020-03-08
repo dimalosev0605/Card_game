@@ -38,53 +38,20 @@ Rectangle {
             id: header_row
             width: opened_cards_view.width
             height: 30
-            Text {
-                width: opened_cards_view.cellWidth
-                height: header_row.height
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                fontSizeMode: Text.Fit
-                minimumPointSize: 1
-                font.pointSize: 12
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                text: human_score.text
-            }
-            Text {
-                width: opened_cards_view.cellWidth
-                height: header_row.height
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                fontSizeMode: Text.Fit
-                minimumPointSize: 1
-                font.pointSize: 12
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                text: left_bot_score.text
-            }
-            Text {
-                width: opened_cards_view.cellWidth
-                height: header_row.height
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                fontSizeMode: Text.Fit
-                minimumPointSize: 1
-                font.pointSize: 12
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                text: top_bot_score.text
-            }
-            Text {
-                width: opened_cards_view.cellWidth
-                height: header_row.height
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                fontSizeMode: Text.Fit
-                minimumPointSize: 1
-                font.pointSize: 12
-                elide: Text.ElideRight
-                wrapMode: Text.WordWrap
-                text: right_bot_score.text
+            Repeater {
+                model: [human_score, left_bot_score, top_bot_score, right_bot_score]
+                Text {
+                    width: opened_cards_view.cellWidth
+                    height: header_row.height
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    fontSizeMode: Text.Fit
+                    minimumPointSize: 1
+                    font.pointSize: 12
+                    elide: Text.ElideRight
+                    wrapMode: Text.WordWrap
+                    text: modelData.text
+                }
             }
         }
 
