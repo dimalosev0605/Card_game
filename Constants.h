@@ -9,10 +9,12 @@ namespace Constants
     const int count_of_cards = 36;
     const int count_of_players = 4;
     const int count_of_cards_for_player = count_of_cards / count_of_players;
+    const int count_of_heaps = count_of_cards / count_of_players;
+    const int count_of_cards_in_heap = count_of_cards / count_of_cards_for_player;
     const int count_of_suits = 4;
 
     const QString path_to_qrc = "qrc:/cards/";
-    const QString path_to_backs_imgs = path_to_qrc + "back/";
+    const QString path_to_backs_imgs = path_to_qrc + "backs/";
     const QString cards_imgs_extension = ".svg";
 
     const QMap<int, QString> suit_folders = {

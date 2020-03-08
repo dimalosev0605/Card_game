@@ -15,8 +15,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        base_model.cpp \
+        bot_model.cpp \
         card.cpp \
-        main.cpp
+        human_model.cpp \
+        main.cpp \
+        referee_model.cpp
 
 RESOURCES += qml.qrc
 
@@ -77,4 +81,8 @@ DISTFILES += \
 
 HEADERS += \
     Constants.h \
-    card.h
+    base_model.h \
+    bot_model.h \
+    card.h \
+    human_model.h \
+    referee_model.h

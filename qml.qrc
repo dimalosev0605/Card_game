@@ -46,5 +46,7 @@
         <file>cards/spades/queen.svg</file>
         <file>Game_view.qml</file>
         <file>Back_btn.qml</file>
+        <file>Card_delegate.qml</file>
+        <file>Opened_cards_view.qml</file>
     </qresource>
 </RCC>
