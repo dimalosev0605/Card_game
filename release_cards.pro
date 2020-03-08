@@ -15,12 +15,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        base_model.cpp \
-        bot_model.cpp \
+        models/base_model.cpp \
+        models/human_model.cpp \
+        models/bot_model.cpp \
+        models/referee_model.cpp \
         card.cpp \
-        human_model.cpp \
-        main.cpp \
-        referee_model.cpp
+        main.cpp
 
 RESOURCES += qml.qrc
 
@@ -80,9 +80,9 @@ DISTFILES += \
     cards/spades/queen.svg
 
 HEADERS += \
-    Constants.h \
-    base_model.h \
-    bot_model.h \
+    models/base_model.h \
+    models/human_model.h \
+    models/bot_model.h \
+    models/referee_model.h \
     card.h \
-    human_model.h \
-    referee_model.h
+    Constants.h
